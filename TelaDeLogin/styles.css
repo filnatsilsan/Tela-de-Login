@@ -1,0 +1,202 @@
+/* ========================================
+   IMPORTAÇÃO DE FONTES
+   ======================================== */
+
+/* Importa a fonte Poppins do Google Fonts com todos os pesos e estilos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+/* ========================================
+   RESET GLOBAL
+   ======================================== */
+
+/* Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    /* Define o box-sizing para incluir padding e border no cálculo da largura/altura */
+    box-sizing: border-box;
+    /* Aplica a fonte Poppins em toda a página */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========================================
+   CONFIGURAÇÃO DO BODY
+   ======================================== */
+
+body {
+    /* Usa Flexbox para centralizar o conteúdo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    
+    /* Define altura mínima de 100% da viewport */
+    min-height: 100vh;
+    
+    /* Imagem de fundo roxa */
+    background: url('./img/BCGRoxo.jpg');
+    background-size: cover; /* Cobre toda a área disponível */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* ========================================
+   CONTAINER DO FORMULÁRIO
+   ======================================== */
+
+.container {
+    width: 420px;
+    
+    /* Fundo transparente com efeito glass morphism */
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* Borda semi-transparente */
+    border-radius: 10px;
+    
+    color: #fff; /* Texto branco */
+    padding: 30px 40px;
+    
+    /* Sombra complexa com múltiplas camadas para efeito de profundidade */
+    box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    /* Efeito de desfoque no fundo (glass morphism) */
+    backdrop-filter: blur(10px);
+}
+
+/* Título principal do formulário */
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+/* ========================================
+   CAMPOS DE INPUT
+   ======================================== */
+
+/* Container de cada campo de entrada */
+.input-box {
+    position: relative; /* Permite posicionamento absoluto dos ícones */
+    width: 100%;
+    height: 20px;
+    margin: 55px 0; /* Espaçamento vertical entre campos */
+}
+
+/* Estilização dos inputs */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    
+    /* Fundo transparente com borda semi-transparente */
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px; /* Bordas arredondadas */
+    outline: none; /* Remove outline padrão do navegador */
+    
+    font-size: 18px;
+    color: #fff;
+    
+    /* Padding: 20px verticalmente, 45px à direita (espaço para ícone), 20px à esquerda */
+    padding: 20px 45px 20px 20px;
+}
+
+/* Estilo do placeholder dos inputs */
+.input-box input::placeholder {
+    color: #ffffffa7; /* Branco semi-transparente */
+}   
+
+/* Ícones posicionados dentro dos inputs */
+.input-box i {
+    position: absolute;
+    right: 20px; /* Posicionado à direita */
+    font-size: 20px;
+    top: 50%; /* Centralizado verticalmente */
+    transform: translateY(-50); /* Ajuste fino da centralização */
+}
+
+/* ========================================
+   SEÇÃO LEMBRAR SENHA / ESQUECEU SENHA
+   ======================================== */
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between; /* Distribui elementos nas extremidades */
+    margin: -15px 0 15px; /* Margem negativa para aproximar do campo acima */
+}
+
+/* Estilização do checkbox */
+.remember-forgot label input {
+    accent-color: #fff; /* Cor do checkbox quando marcado */
+    margin-right: 5px; /* Espaço entre checkbox e texto */
+}
+
+/* Links da seção remember-forgot */
+.remember-forgot a {
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-size: 14px;
+    color: #ffffcc; /* Amarelo claro */
+    font-weight: 600; /* Negrito */
+}
+
+/* Efeito hover nos links */
+.remember-forgot a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* ========================================
+   BOTÃO DE LOGIN
+   ======================================== */
+
+.login {
+    width: 100%;
+    height: 50px;
+    
+    /* Estilo inicial: fundo branco */
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer; /* Indica que é clicável */
+    
+    font-size: 16px;
+    color: #333; /* Texto escuro */
+    font-weight: 600;
+    
+    /* Mesma sombra do container para consistência visual */
+    box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Efeito hover no botão: inverte as cores */
+.login:hover {
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid rgba(255, 255, 255, .2); /* Adiciona borda */
+    color: #fff; /* Texto branco */
+    transition: 0.5s; /* Transição suave de 0.5 segundos */
+}
+
+/* ========================================
+   SEÇÃO DE CADASTRO
+   ======================================== */
+
+.register-link {
+    text-align: center;
+    margin: 20px 0 15px;
+    font-size: 14px;
+}
+
+/* Link de cadastro */
+.register-link a {
+    text-decoration: none;
+    color: #ffffcc; /* Amarelo claro */
+    font-weight: 600;
+}
+
+/* Efeito hover no link de cadastro */
+.register-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+    
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Importa a biblioteca de ícones Boxicons via CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Importa o arquivo CSS personalizado para estilização da página -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Define o título que aparece na aba do navegador -->
+    <title>Tela de Login</title>
+</head>
+<body>
+    <!-- Container principal que envolve todo o conteúdo da página -->
+    <main class="container">
+        
+        <!-- Formulário de login -->
+        <form>  
+            <!-- Título principal do formulário -->
+            <h1>Tela de Login</h1>
+            
+            <!-- Campo de entrada para o e-mail/usuário -->
+            <div class="input-box">
+                <!-- Input de e-mail com validação HTML5 (required) -->
+                <input placeholder="Usuário" type="email" required>
+                <!-- Ícone de usuário posicionado ao lado do input -->
+                <i class='bx bx-user'></i>
+            </div>
+            
+            <!-- Campo de entrada para a senha -->
+            <div class="input-box">
+                <!-- Input de senha (texto oculto) com validação obrigatória -->
+                <input placeholder="Senha" type="password" required>
+                <!-- Ícone de cadeado ao lado do input -->
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <!-- Seção com checkbox "Lembrar senha" e link de redefinição -->
+            <div class="remember-forgot">   
+                <!-- Label com checkbox para lembrar credenciais -->
+                <label>
+                    <input type="checkbox" id="rememberMe">Lembrar senha
+                </label>
+                
+                <!-- Link para página de recuperação de senha -->
+                <p><a href="#">Redefinir senha</a></p>
+            </div>
+            
+            <!-- Espaçamento vertical -->
+            <br>
+            
+            <!-- Botão de submissão do formulário -->
+            <button type="submit" class="login">Login</button>
+            
+            <!-- Espaçamento vertical duplo -->
+            <br>
+            <br>
+            
+            <!-- Seção com link para cadastro de novos usuários -->
+            <div class="register-link">
+                <p>Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
